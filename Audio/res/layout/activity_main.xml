@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.audio.MainActivity" >
+
+    <ImageButton
+        android:id="@+id/chat_send_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:enabled="false"
+        android:scaleType="centerInside" />
+
+    <com.example.audio.FrameLayoutFixed
+        android:id="@+id/record_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/slideText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/slidearrow" />
+
+            <TextView
+                android:id="@+id/slideToCancelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:textColor="#999999"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#ffffffff"
+            android:orientation="horizontal"
+            android:paddingLeft="13dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/rec" />
+
+            <TextView
+                android:id="@+id/recording_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:text="00:00"
+                android:textColor="#4d4c4b"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </com.example.audio.FrameLayoutFixed>
+
+    <ImageButton
+        android:id="@+id/chat_audio_send_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/white"
+        android:enabled="false"
+        android:paddingRight="4dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/mic_button_states" />
+
+</RelativeLayout>
